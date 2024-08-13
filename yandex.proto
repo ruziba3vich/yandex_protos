@@ -2,8 +2,10 @@ syntax = "proto3";
 
 option go_package = "./genprotos";
 
+import "google/protobuf/empty.proto";
+
 service TaxiCoordinatesService {
-    rpc GetTaxiCoordinatesById(GetTaxiCoordinatesByIdRequest) returns (TaxiCoordinate);
+    rpc GetTaxiCoordinatesById(GetTaxiCoordinatesByIdRequest) returns (google.protobuf.Empty);
 }
 
 message GetTaxiCoordinatesByIdRequest {
