@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "./genprotos";
+
+message GetTaxiCoordinatesById {
+    string taxi_id = 1;
+}
+
+message TaxiCoordinate {
+    string taxi_id = 1;
+    float angle = 2;
+    float x = 3;
+    float y = 4;
+}
