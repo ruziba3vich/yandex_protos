@@ -2,7 +2,11 @@ syntax = "proto3";
 
 option go_package = "./genprotos";
 
-message GetTaxiCoordinatesById {
+service TaxiCoordinatesService {
+    rpc GetTaxiCoordinatesById(GetTaxiCoordinatesByIdRequest) returns (TaxiCoordinate);
+}
+
+message GetTaxiCoordinatesByIdRequest {
     string taxi_id = 1;
 }
 
